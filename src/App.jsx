@@ -19,12 +19,21 @@ const socialIcons = {
 };
 
 function App() {
+
+
+  
+ 
+
+
+ 
+  
   return (
     <div className="flex flex-col overflow-hidden">
       <div className="flex flex-col py-24 gap-8 container mx-auto px-12 bg-white dark:bg-dark  ">
         <Link
+          id="profile-img"
           to={"/"}
-          className="block h-24 w-24 rounded-full overflow-hidden border-2 border-gray-50 shadow-lg "
+          className="block aspect-square w-24 h-24  rounded-full overflow-hidden border-2 border-gray-50 dark:border-gray-500 shadow-lg  dark:dark:animate-pulse "
         >
           <img
             className="max-w-full"
@@ -32,10 +41,10 @@ function App() {
             alt="photo profile"
           />
         </Link>
-        <h1 className="text-4xl font-bold dark:text-white">
+        <h1 className=" lg:w-[70%] text-3xl lg:text-5xl font-bold dark:text-white">
           Software designer, founder, and amateur astronaut.
         </h1>
-        <p className="text-gray-500 dark:text-gray-300 ">
+        <p className=" lg:w-[70%] text-gray-500 dark:text-gray-300 ">
           I’m Spencer, a software designer and entrepreneur based in New York
           City. I’m the founder and CEO of Planetaria, where we develop
           technologies that empower regular people to explore space on their own
@@ -80,9 +89,9 @@ function App() {
         </div>
       </div>
 
-      <div className="container mx-auto py-24 px-12 flex flex-col md:flex-row md:justify-center gap-8 bg-white dark:bg-dark">
+      <div className="container mx-auto py-24 px-12 flex flex-col lg:flex-row  gap-8 bg-white dark:bg-dark">
         {/* update */}
-        <div className=" border dark:border-gray-500 rounded-lg p-6 flex flex-col gap-4 ">
+        <div className=" border dark:border-gray-500 rounded-lg p-6 flex flex-1 flex-col gap-4 ">
           <div className="flex gap-4 items-center">
             <span className="text-gray-500 ">
               {" "}
@@ -95,7 +104,7 @@ function App() {
             Get notified when I publish something new, and unsubscribe at any
             time.
           </p>
-          <form className="flex gap-4">
+          <form className="flex flex-col sm:flex-row gap-4">
             <input
               type="email"
               className="flex-1 dark:text-gray-100 border dark:bg-transparent border-gray-300 dark:border-gray-500 rounded-md outline-none p-2 shadow-md"
@@ -107,7 +116,7 @@ function App() {
         </div>
 
         {/* work */}
-        <div className="border dark:border-gray-500 rounded-lg p-6 flex flex-col gap-6">
+        <div className="border  dark:border-gray-500 rounded-lg p-6 flex flex-1 flex-col gap-6">
           <div className="flex gap-4 items-center">
             <span className="text-gray-500 ">
               {" "}
@@ -119,15 +128,15 @@ function App() {
           <div className="flex flex-col gap-6">
             {workspaces.map((wSpace, index) => {
               return (
-                <div key={index} className=" flex justify-between items-end  ">
-                  <div className="flex gap-4 items-center">
+                <div key={index} className=" flex flex-col sm:flex-row sm:justify-between sm:items-end  ">
+                  <div className="flex sm:flex-row flex-col gap-2 items-center   sm:gap-4 sm:items-center">
                     <div className="w-12 h-12 overflow-hidden rounded-full p-1 border dark:border-gray-500 shadow-xl ">
                       <img
                         src={wSpace.img}
                         className="w-full h-full rounded-full"
                       />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center sm:items-start">
                       <h3 className="font-semibold dark:text-gray-100">
                         {wSpace.name}
                       </h3>
@@ -137,7 +146,7 @@ function App() {
                     </div>
                   </div>
 
-                  <p className="text-gray-500 font-medium text-sm">
+                  <p className="text-gray-500 font-medium text-sm text-center mt-2">
                     {wSpace.period}{" "}
                   </p>
                 </div>
