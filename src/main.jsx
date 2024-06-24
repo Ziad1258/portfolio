@@ -9,11 +9,13 @@ import Footer from "./components/footer/footer.jsx";
 import NavbarMobile from "./components/navbar/navbarMobile.jsx";
 import Projects from "./pages/projects/projects.jsx";
 import Uses from "./pages/uses/uses.jsx";
+import Contact from "./pages/contact/contact.jsx";
+import MainProvider from "./context/activeProvider.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
-      
-     <div className="bg-gray-100 dark:bg-black">
+      <MainProvider>
+      <div className="bg-gray-100 dark:bg-black">
         <Navbar />
         <NavbarMobile />
         <Routes>
@@ -21,9 +23,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path='/uses' element={<Uses />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
        <Footer /> 
-     </div>
+       </div>
+      </MainProvider>
     </Router>
   </React.StrictMode>
 );

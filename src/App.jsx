@@ -7,9 +7,14 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { images } from "./data/data";
 import { workspaces } from "./data/data";
+import { useRef } from "react";
+import Lottie from "lottie-react";
+import checkAnimation from "../public/check.json";
 
 import { IoBagHandleSharp } from "react-icons/io5";
 import { FaEnvelope } from "react-icons/fa6";
+
+import { useForm, ValidationError } from "@formspree/react";
 
 const socialIcons = {
   FaFacebook: FaFacebook,
@@ -19,25 +24,39 @@ const socialIcons = {
 };
 
 function App() {
+  const [state, handleSubmit] = useForm("xldrrgea");
+  const emailRegEx = /\w+@\D+\.\D+/gi;
+  const InputRef = useRef();
+  const submitHandling = (e) => {
+    e.preventDefault();
+    const inputValue = InputRef.current.value;
 
+    if (emailRegEx.test(inputValue)) {
+      handleSubmit(e);
+    } else {
+      InputRef.current.value = "";
+      InputRef.current.placeholder = "please enter a valid email";
+    }
+  };
 
-  
- 
+  if (state.succeeded) {
+    setTimeout(() => {
+      window.location.reload();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 3000);
+  }
 
-
- 
-  
   return (
     <div className="flex flex-col overflow-hidden">
       <div className="flex flex-col py-24 gap-8 container mx-auto px-12 bg-white dark:bg-dark  ">
         <Link
           id="profile-img"
           to={"/"}
-          className="block aspect-square w-24 h-24  rounded-full overflow-hidden border-2 border-gray-50 dark:border-gray-500 shadow-lg  dark:dark:animate-pulse "
+          className="block aspect-square w-36 h-36  rounded-full overflow-hidden border-2 border-gray-50 dark:border-gray-500 shadow-lg   "
         >
           <img
-            className="max-w-full"
-            src="/public/profile.JPEG"
+            className="w-full h-full object-cover "
+            src="/public/Profile.jpg"
             alt="photo profile"
           />
         </Link>
@@ -104,15 +123,44 @@ function App() {
             Get notified when I publish something new, and unsubscribe at any
             time.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              className="flex-1 dark:text-gray-100 border dark:bg-transparent border-gray-300 dark:border-gray-500 rounded-md outline-none p-2 shadow-md"
-            />
-            <button className="bg-black dark:bg-zinc-800 py-2 px-4 capitalize text-white border dark:border-gray-500 outline-none rounded-md">
+          <form
+            onSubmit={submitHandling}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            <div className="flex flex-1">
+              <input
+                ref={InputRef}
+                type="email"
+                name="email"
+                className="flex-1 dark:text-gray-100 border dark:bg-transparent border-gray-300 dark:border-gray-500 rounded-md outline-none p-2 shadow-md"
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="bg-black dark:bg-zinc-800 py-2 px-4 capitalize text-white border dark:border-gray-500 outline-none rounded-md disabled:opacity-70 disabled:cursor-not-allowed "
+            >
               join
             </button>
           </form>
+          {state.succeeded ? (
+            <div className="text-gray-500 dark:text-gray-300 my-8 flex gap-2 justify-center items-center">
+              {" "}
+              <p className=" ">your email has sent correctly ! </p>
+              <Lottie
+                className="h-6"
+                animationData={checkAnimation}
+                loop="false"
+              />
+            </div>
+          ) : (
+            ""
+          )}
         </div>
 
         {/* work */}
@@ -128,7 +176,10 @@ function App() {
           <div className="flex flex-col gap-6">
             {workspaces.map((wSpace, index) => {
               return (
-                <div key={index} className=" flex flex-col sm:flex-row sm:justify-between sm:items-end  ">
+                <div
+                  key={index}
+                  className=" flex flex-col sm:flex-row sm:justify-between sm:items-end  "
+                >
                   <div className="flex sm:flex-row flex-col gap-2 items-center   sm:gap-4 sm:items-center">
                     <div className="w-12 h-12 overflow-hidden rounded-full p-1 border dark:border-gray-500 shadow-xl ">
                       <img
