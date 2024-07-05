@@ -5,7 +5,6 @@ import { useContext } from "react";
 
 export default function Footer() {
   const { active, setActive } = useContext(MainContext);
-  console.log(active);
   const handleStates = (activeLink) => {
     setActive(activeLink);
     window.scrollTo({ top: 0, behavior: "smooth" });

@@ -61,13 +61,12 @@ function App() {
           />
         </Link>
         <h1 className=" lg:w-[70%] text-3xl lg:text-5xl font-bold dark:text-white">
-          Software designer, founder, and amateur astronaut.
+          Mobile & Web Front-End Developer
         </h1>
         <p className=" lg:w-[70%] text-gray-500 dark:text-gray-300 ">
-          I’m Spencer, a software designer and entrepreneur based in New York
-          City. I’m the founder and CEO of Planetaria, where we develop
-          technologies that empower regular people to explore space on their own
-          terms.
+          I am Ferdjani Ziad, a front-end developer from Algeria specializing in
+          mobile and web development. Passionate about programming and software,
+          I am dedicated to creating intuitive and engaging digital experiences.
         </p>
 
         <div className="flex gap-4 items-center">
