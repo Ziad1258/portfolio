@@ -48,6 +48,9 @@ function App() {
 
   return (
     <div className="flex flex-col overflow-hidden">
+      <h1 className="text-green-800 text-5xl" >hello</h1>
+      <img src="/public/one.jpg" alt="profile" className="w-24 h-24" />
+
       <div className="flex flex-col py-24 gap-8 container mx-auto px-12 bg-white dark:bg-dark  ">
         <Link
           id="profile-img"

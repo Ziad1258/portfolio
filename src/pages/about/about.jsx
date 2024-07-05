@@ -20,7 +20,7 @@ export default function About() {
         {/* left part [title + including my self]  */}
         <div className="flex flex-col  flex-1 gap-8 ">
           <h1 className="font-bold text-3xl   dark:text-gray-300">
-            I’m Spencer Sharp. I live in New York City, where I design the
+            I’m Ferdjani Ziad. I live in Algeria, where I design the
             future.
           </h1>
           <div className="  flex flex-col gap-8">
