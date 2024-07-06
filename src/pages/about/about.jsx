@@ -57,7 +57,7 @@ export default function About() {
          <div className="w-[250px] sm:w-[300px] lg:w-[400px] rounded-lg overflow-hidden shadow-lg rotate-3">
          <img
           className="max-w-full aspect-square object-cover"
-          src="../../../public/Profile.jpg"
+          src="/public/Profile.jpg"
             alt=""
           />
          </div>
