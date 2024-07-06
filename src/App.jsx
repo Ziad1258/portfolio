@@ -48,9 +48,7 @@ function App() {
 
   return (
     <div className="flex flex-col overflow-hidden">
-      <h1 className="text-green-800 text-5xl" >hello</h1>
-      <img src="/src/assets/avatar.png" alt="profile" className="w-24 h-24" />
-
+      
       <div className="flex flex-col py-24 gap-8 container mx-auto px-12 bg-white dark:bg-dark  ">
         <Link
           id="profile-img"
@@ -59,7 +57,7 @@ function App() {
         >
           <img
             className="w-full h-full object-cover "
-            src="/public/Profile.jpg"
+            src="/Profile.jpg"
             alt="photo profile"
           />
         </Link>
@@ -186,7 +184,7 @@ function App() {
                     <div className="w-12 h-12 overflow-hidden rounded-full p-1 border dark:border-gray-500 shadow-xl ">
                       <img
                         src={wSpace.img}
-                        className="w-full h-full rounded-full"
+                        className="w-full h-full rounded-full object-cover "
                       />
                     </div>
                     <div className="flex flex-col items-center sm:items-start">

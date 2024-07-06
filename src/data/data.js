@@ -46,11 +46,11 @@ export const socialMediaIcons = [
 ];
 
 export const images = [
-  { name: "/public/one.jpg" },
-  { name: "/public/two.jpg" },
-  { name: "/public/three.jpg" },
-  { name: "/public/four.jpg" },
-  { name: "/public/five.jpg" },
+  { name: "/one.jpg" },
+  { name: "/two.jpg" },
+  { name: "/three.jpg" },
+  { name: "/four.jpg" },
+  { name: "/five.jpg" },
 ];
 
 export const workspaces = [
@@ -58,19 +58,19 @@ export const workspaces = [
     name: "Freelancer",
     function: "Frontend Developer",
     period: "2024 - present",
-    img: "/public/Profile.jpg",
+    img: "/Profile.jpg",
   },
   {
     name: "hoskaDev",
     function: "Frontend Developer",
     period: "2023 - 2024",
-    img: "/public/hoskadev.jpg",
+    img: "/hoskadev.jpg",
   },
   {
     name: "hoskaDev",
     function: "Intership",
     period: "2022 — 2023",
-    img: "/public/hoskadev.jpg",
+    img: "/hoskadev.jpg",
   },
 ];
 
@@ -98,37 +98,37 @@ export const projects = [
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.jpeg",
+    img: "/public/profile.JPEG",
     demoLink: "https://www.planetaria.com/",
   },
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.jpeg",
+    img: "/public/profile.JPEG",
     demoLink: "https://www.planetaria.com/",
   },
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.jpeg",
+    img: "/profile.jpeg",
     demoLink: "https://www.planetaria.com/",
   },
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.jpeg",
+    img: "/profile.jpeg",
     demoLink: "https://www.planetaria.com/",
   },
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.jpeg",
+    img: "/profile.jpeg",
     demoLink: "https://www.planetaria.com/",
   },
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.jpeg",
+    img: "/profile.jpeg",
     demoLink: "https://www.planetaria.com/",
   },
 ];
