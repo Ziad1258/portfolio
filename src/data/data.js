@@ -98,7 +98,7 @@ export const projects = [
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.JPEG",
+    img: "/public/four.jpg",
     demoLink: "https://www.planetaria.com/",
   },
   {
