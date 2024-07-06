@@ -71,7 +71,7 @@ export default function Navbar() {
           >
             <img
               className="w-full h-full object-cover "
-              src="/public/Profile.jpg"
+              src="/Profile.jpg"
               alt="photo profile"
             />
           </Link>

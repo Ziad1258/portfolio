@@ -75,7 +75,7 @@ export default function NavbarMobile() {
               >
                 <img
                   className="w-full h-full object-cover "
-                  src="/public/Profile.jpg"
+                  src="/Profile.jpg"
                   alt="photo profile"
                 />
               </Link>

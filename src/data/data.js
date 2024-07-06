@@ -98,19 +98,13 @@ export const projects = [
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/four.jpg",
+    img: "/four.jpg",
     demoLink: "https://www.planetaria.com/",
   },
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/public/profile.JPEG",
-    demoLink: "https://www.planetaria.com/",
-  },
-  {
-    name: "Palenteria",
-    desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.jpeg",
+    img: "/profile.JPEG",
     demoLink: "https://www.planetaria.com/",
   },
   {
@@ -128,7 +122,13 @@ export const projects = [
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.jpeg",
+    img: "/profile.jpg",
+    demoLink: "https://www.planetaria.com/",
+  },
+  {
+    name: "Palenteria",
+    desc: "Creating technology to empower civilians to explore space on their own terms.",
+    img: "/profile.jpg",
     demoLink: "https://www.planetaria.com/",
   },
 ];
