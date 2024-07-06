@@ -57,7 +57,7 @@ function App() {
         >
           <img
             className="w-full h-full object-cover "
-            src="/Profile.jpg"
+            src="/public/Profile.jpg"
             alt="photo profile"
           />
         </Link>
