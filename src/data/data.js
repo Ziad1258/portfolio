@@ -1,3 +1,4 @@
+import myImage from "../assets/three.jpg"
 export const navbarLinks = [
   {
     title: "About",
@@ -48,7 +49,7 @@ export const socialMediaIcons = [
 export const images = [
   { name: "/src/assets/one.jpg" },
   { name: "/src/assets/two.jpg" },
-  { name: "../assets/three.jpg" },
+  { name: myImage },
   { name: "/src/assets/four.jpg" },
   { name: "/src/assets/five.jpg" },
 ];
