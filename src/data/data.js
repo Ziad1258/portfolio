@@ -1,4 +1,9 @@
-import myImage from "../assets/three.jpg"
+import imageOne from "../assets/one.jpg"
+import imageTwo from "../assets/two.jpg" 
+import imageThree from "../assets/three.jpg"
+import imageFour from "../assets/four.jpg"
+import imageFive from "../assets/five.jpg"
+
 export const navbarLinks = [
   {
     title: "About",
@@ -47,11 +52,12 @@ export const socialMediaIcons = [
 ];
 
 export const images = [
-  { name: "/src/assets/one.jpg" },
-  { name: "/src/assets/two.jpg" },
-  { name: myImage },
-  { name: "/src/assets/four.jpg" },
-  { name: "/src/assets/five.jpg" },
+  {name : imageOne} ,
+  {name : imageTwo} ,
+  {name : imageThree} ,
+  {name : imageFour} ,
+  {name : imageFive} ,
+  
 ];
 
 export const workspaces = [
