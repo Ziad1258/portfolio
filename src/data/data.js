@@ -48,7 +48,7 @@ export const socialMediaIcons = [
 export const images = [
   { name: "/src/assets/one.jpg" },
   { name: "/src/assets/two.jpg" },
-  { name: "/src/assets/three.jpg" },
+  { name: "../assets/three.jpg" },
   { name: "/src/assets/four.jpg" },
   { name: "/src/assets/five.jpg" },
 ];
@@ -98,7 +98,7 @@ export const projects = [
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/four.jpg",
+    img: "/Profile.jpg",
     demoLink: "https://www.planetaria.com/",
   },
   {
@@ -110,27 +110,23 @@ export const projects = [
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.jpeg",
+    img: "/profile.JPEG",
     demoLink: "https://www.planetaria.com/",
   },
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.jpeg",
+    img: "/Profile.jpg",
     demoLink: "https://www.planetaria.com/",
   },
+
   {
     name: "Palenteria",
     desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.jpg",
+    img: "/Profile.jpg",
     demoLink: "https://www.planetaria.com/",
   },
-  {
-    name: "Palenteria",
-    desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.jpg",
-    demoLink: "https://www.planetaria.com/",
-  },
+ 
 ];
 
 export const workStationData = [
