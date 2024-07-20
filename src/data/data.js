@@ -46,11 +46,11 @@ export const socialMediaIcons = [
 ];
 
 export const images = [
-  { name: "/one.jpg" },
-  { name: "/two.jpg" },
-  { name: "/three.jpg" },
-  { name: "/four.jpg" },
-  { name: "/five.jpg" },
+  { name: "/src/assets/one.jpg" },
+  { name: "/src/assets/two.jpg" },
+  { name: "/src/assets/three.jpg" },
+  { name: "/src/assets/four.jpg" },
+  { name: "/src/assets/five.jpg" },
 ];
 
 export const workspaces = [
