@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
-import { images } from "./data/data";
+// import { images } from "./data/data";
 import { workspaces } from "./data/data";
 import { useRef } from "react";
 import Lottie from "lottie-react";
@@ -15,6 +15,7 @@ import { IoBagHandleSharp } from "react-icons/io5";
 import { FaEnvelope } from "react-icons/fa6";
 
 import { useForm, ValidationError } from "@formspree/react";
+import Images from "./components/images";
 
 const socialIcons = {
   FaFacebook: FaFacebook,
@@ -86,26 +87,9 @@ function App() {
         </div>
       </div>
 
-      <div className=" bg-white dark:bg-dark  ">
-        <div className=" flex justify-center gap-5   sm:gap-8">
-          {images.map((img, index) => {
-            return (
-              <div
-                key={index}
-                className={`relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 ${
-                  index % 2 === 0 ? "rotate-2" : "-rotate-2"
-                }`}
-              >
-                <img
-                  className="absolute  h-full w-full object-cover"
-                  key={index}
-                  src={img.name}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      {/* images */}
+
+      <Images />
 
       <div className="container mx-auto py-24 px-12 flex flex-col lg:flex-row  gap-8 bg-white dark:bg-dark">
         {/* update */}

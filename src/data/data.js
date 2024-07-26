@@ -4,6 +4,13 @@ import imageThree from "../assets/three.jpg"
 import imageFour from "../assets/four.jpg"
 import imageFive from "../assets/five.jpg"
 
+import hasib from "../assets/Hasib.png"
+import Portfolio from "../assets/ferzDev.png"
+import Salatify from "../assets/Saltify.png"
+import rakeen from "../assets/ركين للتنمية العقارية.png"
+import Sunny from "../assets/Sunny.png"
+import zedExpress from "../assets/ZedExpress.png"
+
 export const navbarLinks = [
   {
     title: "About",
@@ -103,35 +110,43 @@ export const aboutContent = [
 
 export const projects = [
   {
-    name: "Palenteria",
-    desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/Profile.jpg",
-    demoLink: "https://www.planetaria.com/",
-  },
-  {
-    name: "Palenteria",
-    desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.JPEG",
-    demoLink: "https://www.planetaria.com/",
-  },
-  {
-    name: "Palenteria",
-    desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/profile.JPEG",
-    demoLink: "https://www.planetaria.com/",
-  },
-  {
-    name: "Palenteria",
-    desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/Profile.jpg",
-    demoLink: "https://www.planetaria.com/",
+    name: "Hasib",
+    desc: "dedicated to students, allowing them to calculate their grades across various fields.",
+    img: hasib,
+    demoLink: "https://alhaseb.netlify.app/",
   },
 
   {
-    name: "Palenteria",
-    desc: "Creating technology to empower civilians to explore space on their own terms.",
-    img: "/Profile.jpg",
-    demoLink: "https://www.planetaria.com/",
+    name: "zedExpress",
+    desc: "An online store that enables users to purchase clothing. It includes all categories: men, women, and children.",
+    img: zedExpress,
+    demoLink: "https://zedexpress.netlify.app",
+  },
+
+  {
+    name: "Rkeen",
+    desc: "An informational website for a real estate company.",
+    img: rakeen,
+    demoLink: "https://rkeen-eight.vercel.app/",
+  },
+  {
+    name: "Portfolio",
+    desc: "My portfolio contains some information and various projects I have created.",
+    img: Portfolio,
+    demoLink: "https://ferzdev.vercel.app/",
+  },
+  {
+    name: "Suuny",
+    desc: "A simple weather application I have created , enable user to discover the temperature based on the city or country which he choosed",
+    img: Sunny,
+    demoLink: "https://sunny-swart.vercel.app/",
+  },
+
+  {
+    name: "Salatify",
+    desc: "An informational Islamic application that provides prayer times and a variety of Sunnah books, among other features.",
+    img: Salatify,
+    demoLink: "https://salatify.netlify.app/",
   },
  
 ];

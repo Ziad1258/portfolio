@@ -16,20 +16,22 @@ export default function Projects() {
           contribute if you have ideas for how it can be improved.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8  ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project , index) => {
             return (
-                <div key={index} className="  flex flex-col gap-4 border dark:border-gray-500 rounded-lg p-4">
-                    <div className="h-12 w-12 rounded-full overflow-hidden bg-white dark:bg-dark p-2 drop-shadow-lg  dark:border  dark:border-gray-700">
-                    <img src={project.img} alt={project.name} className="w-full h-full object-cover rounded-full" />
+                <div key={index} className="  flex flex-col gap-4 border dark:border-gray-500 rounded-lg py-4 hover:scale-105 hover:shadow-md transition-all duration-300">
+                    <div className=" overflow-hidden bg-white dark:bg-dark p-2 drop-shadow-lg  dark:border  dark:border-gray-700 ">
+                    <img src={project.img} alt={project.name} className="w-full md:max-h-44  object-fit " />
 
                     </div>
+                    <div className="p-4 flex flex-col gap-4">
                     <h1 className="font-bold dark:text-gray-300">{project.name}</h1>
                     <p className=" text-gray-500 dark:text-gray-300">{project.desc}</p>
                     <Link to={project.demoLink} className="text-gray-500 dark:text-gray-300 flex items-center gap-2" target="_blank" rel="noreferrer">
                     <FaLink />
                     <p> {project.name} </p>
                     </Link>
+                    </div>
                 </div>
             )
         })}
