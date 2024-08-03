@@ -2,7 +2,6 @@ import imageOne from "../assets/one.jpg"
 import imageTwo from "../assets/two.jpg" 
 import imageThree from "../assets/three.jpg"
 import imageFour from "../assets/four.jpg"
-import imageFive from "../assets/five.jpg"
 
 import hasib from "../assets/Hasib.png"
 import Portfolio from "../assets/ferzDev.png"
@@ -10,6 +9,8 @@ import Salatify from "../assets/Saltify.png"
 import rakeen from "../assets/ركين للتنمية العقارية.png"
 import Sunny from "../assets/Sunny.png"
 import zedExpress from "../assets/ZedExpress.png"
+
+import Profile from "../../public/Profile.jpg";
 
 export const navbarLinks = [
   {
@@ -59,11 +60,12 @@ export const socialMediaIcons = [
 ];
 
 export const images = [
-  {name : imageOne} ,
+
   {name : imageTwo} ,
   {name : imageThree} ,
+  {name : Profile},
   {name : imageFour} ,
-  {name : imageFive} ,
+  {name : imageOne} ,
   
 ];
 

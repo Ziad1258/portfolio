@@ -1,4 +1,9 @@
 import { images } from '../data/data';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 function Images() {
   return (
     <div className=" bg-white dark:bg-dark  ">
@@ -11,10 +16,11 @@ function Images() {
               index % 2 === 0 ? "rotate-2" : "-rotate-2"
             }`}
           >
-            <img
-              className="absolute  h-full w-full object-cover"
+            <LazyLoadImage
+              className="h-full w-full object-cover"
               key={index}
               src={img.name}
+              alt={img.name}
             />
           </div>
         );

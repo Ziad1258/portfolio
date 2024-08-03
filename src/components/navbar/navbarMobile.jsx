@@ -4,7 +4,7 @@ import { navbarLinks } from "../../data/data";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { MainContext } from "../../context/activeProvider";
-
+import _ from 'lodash';
 
 export default function NavbarMobile() {
   const [fixedNav, setFixedNav] = useState(false);
@@ -29,10 +29,12 @@ export default function NavbarMobile() {
     setLastScrollTop(scrollTop);
   };
 
+  const debouncedScroll = _.debounce(handleScroll , 100);
+
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", debouncedScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", debouncedScroll);
     };
   }, [lastScrollTop]);
 

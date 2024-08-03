@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { MainContext } from "../../context/activeProvider";
 import { useContext } from "react";
-
+import _ from "lodash";
 export default function Navbar() {
   // const [active, setActive] = useState("");
   const { active, setActive } = useContext(MainContext);
@@ -26,10 +26,13 @@ export default function Navbar() {
     }
     setLastScrollTop(scrollTop);
   };
+
+  const debouncedHandleScrollTop = _.debounce(handlScrollTop, 100);
+
   useEffect(() => {
-    window.addEventListener("scroll", handlScrollTop);
+    window.addEventListener("scroll", debouncedHandleScrollTop);
     return () => {
-      window.removeEventListener("scroll", handlScrollTop);
+      window.removeEventListener("scroll", debouncedHandleScrollTop);
     };
   }, [lastScrollTop]);
   useEffect(() => {

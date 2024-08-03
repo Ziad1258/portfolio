@@ -17,6 +17,8 @@ import { FaEnvelope } from "react-icons/fa6";
 import { useForm, ValidationError } from "@formspree/react";
 import Images from "./components/images";
 
+
+
 const socialIcons = {
   FaFacebook: FaFacebook,
   FaInstagram: FaInstagram,
