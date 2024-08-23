@@ -135,7 +135,7 @@ export const projects = [
     name: "Souf Academy",
     desc: "An informational website for private educational academy",
     img: soufacademy,
-    demoLink: "https://ferzdev.vercel.app/",
+    demoLink: "https://souf-academy.vercel.app/",
   },
   {
     name: "Suuny",
