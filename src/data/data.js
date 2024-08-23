@@ -4,11 +4,11 @@ import imageThree from "../assets/three.jpg"
 import imageFour from "../assets/four.jpg"
 
 import hasib from "../assets/Hasib.png"
-import Portfolio from "../assets/ferzDev.png"
 import Salatify from "../assets/Saltify.png"
 import rakeen from "../assets/ركين للتنمية العقارية.png"
 import Sunny from "../assets/Sunny.png"
 import zedExpress from "../assets/ZedExpress.png"
+import soufacademy from "../assets/Soufacademy.png";
 
 import Profile from "../../public/Profile.jpg";
 
@@ -132,9 +132,9 @@ export const projects = [
     demoLink: "https://rkeen-eight.vercel.app/",
   },
   {
-    name: "Portfolio",
-    desc: "My portfolio contains some information and various projects I have created.",
-    img: Portfolio,
+    name: "Souf Academy",
+    desc: "An informational website for private educational academy",
+    img: soufacademy,
     demoLink: "https://ferzdev.vercel.app/",
   },
   {
