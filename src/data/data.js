@@ -11,7 +11,6 @@ import Sunny from "../assets/Sunny.png"
 import zedExpress from "../assets/ZedExpress.png"
 import soufacademy from "../assets/soufacademy.png";
 
-import Profile from "../../public/Profile.jpg";
 
 export const navbarLinks = [
   {
