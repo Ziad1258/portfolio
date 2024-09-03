@@ -2,6 +2,7 @@ import imageOne from "../assets/one.jpg"
 import imageTwo from "../assets/two.jpg" 
 import imageThree from "../assets/three.jpg"
 import imageFour from "../assets/four.jpg"
+import imageFive from "../assets/five.jpg"
 
 import hasib from "../assets/Hasib.png"
 import Salatify from "../assets/Saltify.png"
@@ -63,7 +64,7 @@ export const images = [
 
   {name : imageTwo} ,
   {name : imageThree} ,
-  {name : Profile},
+  {name : imageFive},
   {name : imageFour} ,
   {name : imageOne} ,
   
