@@ -115,7 +115,7 @@ export const projects = [
     name: "Hasib",
     desc: "dedicated to students, allowing them to calculate their grades across various fields.",
     img: hasib,
-    demoLink: "https://alhaseb.netlify.app/",
+    demoLink: "https://alhaseb.vercel.app/",
   },
 
   {
@@ -135,7 +135,7 @@ export const projects = [
     name: "Souf Academy",
     desc: "An informational website for private educational academy",
     img: soufacademy,
-    demoLink: "https://ferzdev.vercel.app/",
+    demoLink: "https://souf-academy.vercel.app/",
   },
   {
     name: "Suuny",
