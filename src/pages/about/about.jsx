@@ -20,65 +20,67 @@ export default function About() {
         {/* left part [title + including my self]  */}
         <div className="flex flex-col  flex-1 gap-8 ">
           <h1 className="font-bold text-3xl   dark:text-gray-300">
-            I’m Ferdjani Ziad. I live in Algeria, where I design the
-            future.
+            I’m Ferdjani Ziad. I live in Algeria, where I design the future.
           </h1>
           <div className="  flex flex-col gap-8">
-            {aboutContent.map((p , index) => {
+            {aboutContent.map((p, index) => {
               return (
-                <p key={index} className="leading-loose  text-gray-500 dark:text-gray-300 ">
+                <p
+                  key={index}
+                  className="leading-loose  text-gray-500 dark:text-gray-300 "
+                >
                   {p.content}
                 </p>
-              )
+              );
             })}
           </div>
           {/* socialMedia */}
           <div className="flex md:hidden flex-col gap-8 ">
-              
-
-              {socialMediaIcons.map((icon) => {
-                const Icon = socialIcons[icon.icon];
-                return (
-                 <Link to={icon.link} key={icon.name} className="flex gap-4 items-center">
-                  <Icon
-                    className={` text-xl text-gray-500 `}
-                  />
-                  <h1 className="  dark:text-gray-300">Follow on {icon.name} </h1>
-                   
-                 </Link>
-                )
-              })}
-         </div>
+            {socialMediaIcons.map((icon) => {
+              const Icon = socialIcons[icon.icon];
+              return (
+                <Link
+                  to={icon.link}
+                  key={icon.name}
+                  className="flex gap-4 items-center"
+                >
+                  <Icon className={` text-xl text-gray-500 `} />
+                  <h1 className="  dark:text-gray-300">
+                    Follow on {icon.name}{" "}
+                  </h1>
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
         {/* right part [image + socialMediaIcons] */}
         <div className="flex flex-col flex-1 md:pl-16  gap-16">
-        
-         <div className="w-[250px] sm:w-[300px] lg:w-[400px] rounded-lg overflow-hidden shadow-lg rotate-3">
-         <img
-          className="max-w-full aspect-square object-cover"
-          src="/Profile.jpg"
-            alt=""
-          />
-         </div>
-         <div className="hidden md:flex flex-col gap-8 ">
-              
-
-              {socialMediaIcons.map((icon) => {
-                const Icon = socialIcons[icon.icon];
-                return (
-                 <Link to={icon.link} key={icon.name} className="flex gap-4 items-center">
-                  <Icon
-                    className={` text-xl text-gray-500 `}
-                  />
-                  <h1 className="  dark:text-gray-300">Follow on {icon.name} </h1>
-                   
-                 </Link>
-                )
-              })}
-         </div>
+          <div className="w-[250px] sm:w-[300px] lg:w-[400px] rounded-lg overflow-hidden shadow-lg rotate-3">
+            <img
+              className="max-w-full aspect-square object-cover"
+              src="/Profile.jpg"
+              alt=""
+            />
+          </div>
+          <div className="hidden md:flex flex-col gap-8 ">
+            {socialMediaIcons.map((icon) => {
+              const Icon = socialIcons[icon.icon];
+              return (
+                <Link
+                  to={icon.link}
+                  key={icon.name}
+                  className="flex gap-4 items-center"
+                >
+                  <Icon className={`text-xl ${icon.className}`} />
+                  <h1 className="  dark:text-gray-300">
+                    Follow on {icon.name}{" "}
+                  </h1>
+                </Link>
+              );
+            })}
+          </div>
         </div>
-
       </div>
     </div>
   );

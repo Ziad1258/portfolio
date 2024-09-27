@@ -17,8 +17,6 @@ import { FaEnvelope } from "react-icons/fa6";
 import { useForm, ValidationError } from "@formspree/react";
 import Images from "./components/images";
 
-
-
 const socialIcons = {
   FaFacebook: FaFacebook,
   FaInstagram: FaInstagram,
@@ -66,10 +64,11 @@ function App() {
         <h1 className=" lg:w-[70%] text-3xl lg:text-5xl font-bold dark:text-white">
           Mobile & Web Front-End Developer
         </h1>
-        <p className=" lg:w-[70%] text-gray-500 dark:text-gray-300 ">
-          I am Ferdjani Ziad, a front-end developer from Algeria specializing in
-          mobile and web development. Passionate about programming and software,
-          I am dedicated to creating intuitive and engaging digital experiences.
+        <p className="lg:w-[70%] text-gray-500 dark:text-gray-300">
+          Hey there! I&#39;m Ferdjani Ziad, a front-end developer from Algeria.
+          I focus on building both mobile and web applications. I have a real
+          passion for coding and love creating digital experiences that feel
+          intuitive and engaging. Let&#39;s build something great together!
         </p>
 
         <div className="flex gap-4 items-center">

@@ -1,16 +1,15 @@
-import imageOne from "../assets/one.jpg"
-import imageTwo from "../assets/two.jpg" 
-import imageThree from "../assets/three.jpg"
-import imageFour from "../assets/four.jpg"
-import imageFive from "../assets/five.jpg"
+import imageOne from "../assets/one.jpg";
+import imageTwo from "../assets/two.jpg";
+import imageThree from "../assets/three.jpg";
+import imageFour from "../assets/four.jpg";
+import imageFive from "../assets/five.jpg";
 
-import hasib from "../assets/Hasib.png"
-import Salatify from "../assets/Saltify.png"
-import rakeen from "../assets/ركين للتنمية العقارية.png"
-import Sunny from "../assets/Sunny.png"
-import zedExpress from "../assets/ZedExpress.png"
+import hasib from "../assets/Hasib.png";
+import Salatify from "../assets/Saltify.png";
+import rakeen from "../assets/ركين للتنمية العقارية.png";
+import Sunny from "../assets/Sunny.png";
+import zedExpress from "../assets/ZedExpress.png";
 import soufacademy from "../assets/soufacademy.png";
-
 
 export const navbarLinks = [
   {
@@ -60,13 +59,11 @@ export const socialMediaIcons = [
 ];
 
 export const images = [
-
-  {name : imageTwo} ,
-  {name : imageThree} ,
-  {name : imageFive},
-  {name : imageFour} ,
-  {name : imageOne} ,
-  
+  { name: imageTwo },
+  { name: imageThree },
+  { name: imageFive },
+  { name: imageFour },
+  { name: imageOne },
 ];
 
 export const workspaces = [
@@ -89,33 +86,32 @@ export const workspaces = [
     img: "/hoskadev.jpg",
   },
 ];
-
 export const aboutContent = [
   {
     content:
-      "I am Ferdjani Ziad, based in Algeria, a passionate and skilled front-end developer with a keen interest in both mobile and web development. With a deep enthusiasm for all things programming and software, I have dedicated myself to mastering the art of creating engaging, user-friendly, and efficient digital experiences.",
+      "Hi, I’m Ferdjani Ziad, a front-end developer from Algeria with a passion for both mobile and web development. I love diving into the world of programming and software, and I’ve dedicated myself to creating digital experiences that are engaging, easy to use, and efficient.",
   },
   {
     content:
-      "My expertise spans a wide array of front-end technologies, allowing me to craft responsive and visually appealing interfaces that meet the highest standards of modern web and mobile design. My commitment to continuous learning and staying updated with the latest trends in the tech world ensures that my work is always at the cutting edge of innovation.",
+      "I work with a range of front-end technologies, helping me build responsive, visually appealing websites and mobile apps. I always stay up to date with the latest trends in tech, which means I’m constantly learning new things to keep my work modern and innovative.",
   },
   {
     content:
-      "As a developer, I excel in translating complex requirements into seamless and intuitive user experiences. My meticulous attention to detail, combined with a creative approach to problem-solving, makes me a valuable asset in any project I undertake.",
+      "I enjoy taking complex ideas and turning them into simple, intuitive user experiences. I pay attention to the small details and bring a creative approach to problem-solving, which makes sure the projects I work on are always high-quality.",
   },
   {
     content:
-      "Beyond my technical prowess, I am driven by a genuine curiosity and a passion for programming that goes beyond the screen. Whether it's exploring new programming languages, experimenting with the latest frameworks, or delving into the intricacies of software architecture, I am always eager to expand my knowledge and push the boundaries of what's possible in the world of software development.",
+      "Outside of coding, I’m curious and always eager to learn more. Whether it’s exploring new programming languages, trying out different frameworks, or understanding how software architecture works, I’m driven by a genuine love for technology and a desire to keep pushing my skills further.",
   },
 ];
 
-
 export const projects = [
   {
-    name: "Hasib",
+    name: "Alhaseb",
     desc: "dedicated to students, allowing them to calculate their grades across various fields.",
     img: hasib,
     demoLink: "https://alhaseb.vercel.app/",
+    gitHubLink: "https://github.com/Ziad1258/Alhaseb",
   },
 
   {
@@ -123,6 +119,7 @@ export const projects = [
     desc: "An online store that enables users to purchase clothing. It includes all categories: men, women, and children.",
     img: zedExpress,
     demoLink: "https://zedexpress.netlify.app",
+    gitHubLink: "https://github.com/Ziad1258/ZedExpress",
   },
 
   {
@@ -130,18 +127,21 @@ export const projects = [
     desc: "An informational website for a real estate company.",
     img: rakeen,
     demoLink: "https://rkeen-eight.vercel.app/",
+    gitHubLink: "https://github.com/Ziad1258/rakeen",
   },
   {
     name: "Souf Academy",
     desc: "An informational website for private educational academy",
     img: soufacademy,
     demoLink: "https://souf-academy.vercel.app/",
+    gitHubLink: "https://github.com/Ziad1258/soufAcademy",
   },
   {
     name: "Suuny",
     desc: "A simple weather application I have created , enable user to discover the temperature based on the city or country which he choosed",
     img: Sunny,
     demoLink: "https://sunny-swart.vercel.app/",
+    gitHubLink: "https://github.com/Ziad1258/suuny",
   },
 
   {
@@ -149,8 +149,8 @@ export const projects = [
     desc: "An informational Islamic application that provides prayer times and a variety of Sunnah books, among other features.",
     img: Salatify,
     demoLink: "https://salatify.netlify.app/",
+    gitHubLink: "https://github.com/Ziad1258/salatify",
   },
- 
 ];
 
 export const workStationData = [
@@ -187,7 +187,6 @@ export const workStationData = [
   ],
 ];
 
-
 export const devTools = [
   "Developement Tools",
   [
@@ -212,14 +211,14 @@ export const devTools = [
 
 export const productivity = [
   "Productivity",
- [ 
-  {
-    name: "daily.dev",
-    desc: "daily.dev is a community-driven platform that curates and delivers dev news relevant to you. Stay updated with the latest trends, news, and articles from the developer community in one place.",
-  },
-  {
-    name: "Quora",
-    desc: "Quora is a question-and-answer platform where people can ask questions, answer them, and explore topics of interest. It's a valuable resource for gaining insights, sharing knowledge, and learning from diverse perspectives.",
-  },
-]
-]
+  [
+    {
+      name: "daily.dev",
+      desc: "daily.dev is a community-driven platform that curates and delivers dev news relevant to you. Stay updated with the latest trends, news, and articles from the developer community in one place.",
+    },
+    {
+      name: "Quora",
+      desc: "Quora is a question-and-answer platform where people can ask questions, answer them, and explore topics of interest. It's a valuable resource for gaining insights, sharing knowledge, and learning from diverse perspectives.",
+    },
+  ],
+];
