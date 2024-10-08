@@ -4,39 +4,40 @@ import { navbarLinks } from "../../data/data";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 import { MainContext } from "../../context/activeProvider";
-import _ from 'lodash';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function NavbarMobile() {
   const [fixedNav, setFixedNav] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [, setLastScrollTop] = useState(0);
   const [showNav, setShowNav] = useState(false);
   // const [active, setActive] = useState("");
   const { active, setActive } = useContext(MainContext);
 
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      // Scroll Down
-      setFixedNav(false);
-    } else {
-      // Scroll Up
-      if (scrollTop > 100) {
-        setFixedNav(true);
-      } else {
+
+    setLastScrollTop((prevScrollTop) => {
+      if (scrollTop > prevScrollTop) {
+        // Scroll Down
         setFixedNav(false);
+      } else {
+        // Scroll Up
+        if (scrollTop > 200) {
+          setFixedNav(true);
+        } else {
+          setFixedNav(false);
+        }
       }
-    }
-    setLastScrollTop(scrollTop);
+      return scrollTop; // Update lastScrollTop
+    });
   };
 
-  const debouncedScroll = _.debounce(handleScroll , 100);
-
   useEffect(() => {
-    window.addEventListener("scroll", debouncedScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", debouncedScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, []); // No dependencies
 
   useEffect(() => {
     const pageLink = window.location.href.split("/");
@@ -48,24 +49,35 @@ export default function NavbarMobile() {
     } else {
       setActive("");
     }
-  }, [active]);
+  }, [active, setActive]);
   const handleStates = (navState, activeState) => {
     setShowNav(navState);
     setActive(activeState);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: false,
+      easing: "ease",
+      offset: 100,
+    });
+  }, []);
   return (
     <div
       className={`${
         fixedNav && !showNav
-          ? "fixed top-0 left-0 right-0 backdrop-blur-md bg-transparent z-40 "
+          ? "fixed  top-0  left-0 right-0 backdrop-blur-md bg-transparent z-40 "
           : ""
       }`}
     >
       <div
-        style={{ backgroundColor: fixedNav ? "transparent" : "" }}
-        className=" relative flex justify-between  items-center  text-white container mx-auto px-4 sm:px-12 pt-4    md:hidden bg-white dark:bg-dark
-      "
+        // style={{ backgroundColor: fixedNav ? "transparent" : "" }}
+        // className=" relative flex justify-between  items-center  text-white container mx-auto px-4 sm:px-12 pt-4    md:hidden bg-white dark:bg-dark"
+        className={` mainNav relative flex justify-between  items-center  text-white container mx-auto px-4 sm:px-12 pt-4    md:hidden
+          ${fixedNav ? "bg-transparent" : "bg-white dark:bg-dark"}
+          `}
       >
         {/* profile img */}
         <div>
@@ -120,7 +132,12 @@ export default function NavbarMobile() {
                     : " text-black dark:text-gray-300"
                 } `}
               >
-                <Link  className="border-b pb-4 hover:text-gray-500 dark:hover:text-gray-500  dark:border-zinc-700 block"  to={"/"}>Home</Link>
+                <Link
+                  className="border-b pb-4 hover:text-gray-500 dark:hover:text-gray-500  dark:border-zinc-700 block"
+                  to={"/"}
+                >
+                  Home
+                </Link>
               </li>
               {navbarLinks.map((navLink, index) => {
                 return (
@@ -134,7 +151,11 @@ export default function NavbarMobile() {
                   >
                     <Link
                       to={navLink.path}
-                      className={`block ${index !== navbarLinks.length - 1 ? "border-b pb-4 dark:border-zinc-700" : ""}`}
+                      className={`block ${
+                        index !== navbarLinks.length - 1
+                          ? "border-b pb-4 dark:border-zinc-700"
+                          : ""
+                      }`}
                       onClick={() =>
                         handleStates(() => handleStates(false, navLink.title))
                       }

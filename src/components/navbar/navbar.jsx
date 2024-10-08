@@ -2,41 +2,42 @@ import { useEffect, useState } from "react";
 import { navbarLinks } from "../../data/data";
 import ThemeSwitcher from "../../helpers/themeSwitcher";
 import { Link } from "react-router-dom";
-
 import { MainContext } from "../../context/activeProvider";
 import { useContext } from "react";
-import _ from "lodash";
+
 export default function Navbar() {
   // const [active, setActive] = useState("");
   const { active, setActive } = useContext(MainContext);
   const [fixedNav, setFixedNav] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const handlScrollTop = () => {
+  const [, setLastScrollTop] = useState(0);
+  const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      // Scroll Down
-      setFixedNav(false);
-    } else {
-      // Scroll Up
-      if (scrollTop > 100) {
-        setFixedNav(true);
-      } else {
+
+    setLastScrollTop((prevScrollTop) => {
+      if (scrollTop > prevScrollTop) {
+        // Scroll Down
         setFixedNav(false);
+      } else {
+        // Scroll Up
+        if (scrollTop > 200) {
+          setFixedNav(true);
+        } else {
+          setFixedNav(false);
+        }
       }
-    }
-    setLastScrollTop(scrollTop);
+      return scrollTop; // Update lastScrollTop
+    });
   };
 
-  const debouncedHandleScrollTop = _.debounce(handlScrollTop, 100);
-
   useEffect(() => {
-    window.addEventListener("scroll", debouncedHandleScrollTop);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", debouncedHandleScrollTop);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, []); // No dependencie
   useEffect(() => {
     const pageLink = window.location.href.split("/");
+
     const length = pageLink.length;
     const sectionName = pageLink[length - 1];
     const section = navbarLinks.find((link) => link.path === `/${sectionName}`);
@@ -45,11 +46,12 @@ export default function Navbar() {
     } else {
       setActive("");
     }
-  }, [active]);
+  }, [active, setActive]);
   const handleClick = (title) => {
     setActive(title);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
     <div
       className={` ${
@@ -70,7 +72,6 @@ export default function Navbar() {
               animation: active === "" ? "none" : "",
             }}
             className="dark:animate-pulse block h-12 w-12 rounded-full overflow-hidden border-2 border-gray-50 dark:border-gray-500 shadow-lg "
-            onClick={() => setActive("")}
           >
             <img
               className="w-full h-full object-cover "
@@ -85,13 +86,14 @@ export default function Navbar() {
               <li
                 key={index}
                 className={`${
-                  active === link.title
-                    ? "text-gray-500"
-                    : "dark:text-gray-100"
+                  active === link.title ? "text-gray-500" : "dark:text-gray-100"
                 }  hover:text-gray-500 dark:hover:text-gray-500 text-sm font-medium  transition-all duration-300  `}
-                onClick={() => handleClick(link.title)}
               >
-                <Link className="" to={link.path}>
+                <Link
+                  className=""
+                  to={link.path}
+                  onClick={() => handleClick(link.title)}
+                >
                   {link.title}
                 </Link>
               </li>

@@ -15,18 +15,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
       <MainProvider>
-      <div className="bg-gray-100 dark:bg-black">
-        <Navbar />
-        <NavbarMobile />
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path='/uses' element={<Uses />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-       <Footer /> 
-       </div>
+        <div className="bg-gray-100 dark:bg-black">
+          <Navbar />
+          <NavbarMobile />
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/uses" element={<Uses />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </div>
       </MainProvider>
     </Router>
   </React.StrictMode>

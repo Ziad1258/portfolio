@@ -25,7 +25,7 @@ export default function Footer() {
                 active === navLink.title
                   ? " text-gray-500 dark:text-gray-500"
                   : " text-black dark:text-gray-300  "
-              } hover:text-gray-500 dark:hover:text-gray-500  ` }
+              } hover:text-gray-500 dark:hover:text-gray-500  `}
             >
               <Link className="text-sm font-semibold" to={navLink.path}>
                 {navLink.title}

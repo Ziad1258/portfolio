@@ -1,13 +1,8 @@
 import "./index.css";
 import { Link } from "react-router-dom";
 import { socialMediaIcons } from "./data/data";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaTelegram } from "react-icons/fa";
-// import { images } from "./data/data";
 import { workspaces } from "./data/data";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Lottie from "lottie-react";
 import checkAnimation from "../public/check.json";
 
@@ -17,12 +12,8 @@ import { FaEnvelope } from "react-icons/fa6";
 import { useForm, ValidationError } from "@formspree/react";
 import Images from "./components/images";
 
-const socialIcons = {
-  FaFacebook: FaFacebook,
-  FaInstagram: FaInstagram,
-  FaWhatsapp: FaWhatsapp,
-  FaTelegram: FaTelegram,
-};
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [state, handleSubmit] = useForm("xldrrgea");
@@ -47,6 +38,17 @@ function App() {
     }, 3000);
   }
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+      easing: "ease",
+      // offset: 100,
+      disableMutationObserver: true, // prevents AOS from overriding styles applied via Tailwind
+    });
+  }, []);
+
   return (
     <div className="flex flex-col overflow-hidden">
       <div className="flex flex-col py-24 gap-8 container mx-auto px-12 bg-white dark:bg-dark  ">
@@ -54,6 +56,7 @@ function App() {
           id="profile-img"
           to={"/"}
           className="block aspect-square w-36 h-36  rounded-full overflow-hidden border-2 border-gray-50 dark:border-gray-500 shadow-lg   "
+          data-aos="zoom-in"
         >
           <img
             className="w-full h-full object-cover "
@@ -61,10 +64,16 @@ function App() {
             alt="photo profile"
           />
         </Link>
-        <h1 className=" lg:w-[70%] text-3xl lg:text-5xl font-bold dark:text-white">
+        <h1
+          className=" lg:w-[70%] text-3xl lg:text-5xl font-bold dark:text-white"
+          data-aos="fade-left"
+        >
           Mobile & Web Front-End Developer
         </h1>
-        <p className="lg:w-[70%] text-gray-500 dark:text-gray-300">
+        <p
+          data-aos="fade-right"
+          className="lg:w-[70%] text-gray-500 dark:text-gray-300"
+        >
           Hey there! I&#39;m Ferdjani Ziad, a front-end developer from Algeria.
           I focus on building both mobile and web applications. I have a real
           passion for coding and love creating digital experiences that feel
@@ -73,10 +82,16 @@ function App() {
 
         <div className="flex gap-4 items-center">
           {socialMediaIcons.map((media, index) => {
-            const Icon = socialIcons[media.icon];
+            const Icon = media.icon;
 
             return (
-              <Link key={index} rel="noopener noreferrer" to={`${media.link}`}>
+              <Link
+                data-aos="fade-up"
+                data-aos-delay={`${index * 100}`}
+                key={index}
+                rel="noopener noreferrer"
+                to={`${media.link}`}
+              >
                 {
                   <Icon
                     className={`${media.className} text-2xl hover:translate-y-[-2px] transition-all duration-300 `}
@@ -94,7 +109,10 @@ function App() {
 
       <div className="container mx-auto py-24 px-12 flex flex-col lg:flex-row  gap-8 bg-white dark:bg-dark">
         {/* update */}
-        <div className=" border dark:border-gray-500 rounded-lg p-6 flex flex-1 flex-col gap-4 ">
+        <div
+          data-aos="fade-right"
+          className=" border dark:border-gray-500 rounded-lg p-6 flex flex-1 flex-col gap-4 "
+        >
           <div className="flex gap-4 items-center">
             <span className="text-gray-500 ">
               {" "}
@@ -148,7 +166,10 @@ function App() {
         </div>
 
         {/* work */}
-        <div className="border  dark:border-gray-500 rounded-lg p-6 flex flex-1 flex-col gap-6">
+        <div
+          data-aos="fade-left"
+          className="border  dark:border-gray-500 rounded-lg p-6 flex flex-1 flex-col gap-6"
+        >
           <div className="flex gap-4 items-center">
             <span className="text-gray-500 ">
               {" "}

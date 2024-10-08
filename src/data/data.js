@@ -1,8 +1,18 @@
-import imageOne from "../assets/one.jpg";
-import imageTwo from "../assets/two.jpg";
-import imageThree from "../assets/three.jpg";
-import imageFour from "../assets/four.jpg";
-import imageFive from "../assets/five.jpg";
+import imageOne from "../assets/Hasib.png";
+import imageTwo from "../assets/ZedExpress.png";
+import imageThree from "../assets/Saltify.png";
+import imageFour from "../assets/soufacademy.png";
+import imageFive from "../assets/Sunny.png";
+
+import myImage from "../assets/ferzDev.png";
+
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
 import hasib from "../assets/Hasib.png";
 import Salatify from "../assets/Saltify.png";
@@ -33,37 +43,57 @@ export const navbarLinks = [
 
 export const socialMediaIcons = [
   {
-    name: "Facebook",
-    icon: "FaFacebook",
+    name: "Email",
+    icon: MdEmail,
     className: "text-blue-500",
-    link: "https://www.facebook.com/Hb9Li/",
+    link: "mailto:frdjaneziad9@gmail.com",
   },
+
   {
-    name: "Instagram",
-    icon: "FaInstagram",
-    className: "text-red-500",
-    link: "https://www.instagram.com/fer_ziad/",
+    name: "GitHub",
+    icon: FaGithub,
+    className: "text-gray-700",
+    link: "https://github.com/Ziad1258",
   },
   {
     name: "WhatsApp",
-    icon: "FaWhatsapp",
+    icon: FaWhatsapp,
     className: "text-green-500",
     link: "https://wa.me/213792926151",
   },
   {
-    name: "Telegram",
-    icon: "FaTelegram",
+    name: "LinkedIn",
+    icon: FaLinkedin,
     className: "text-blue-500",
-    link: "https://t.me/ferZiad8",
+    link: "https://www.linkedin.com/in/ferdjani-ziad-4775a7191/",
   },
+
+  // {
+  //   name: "Instagram",
+  //   icon: "FaInstagram",
+  //   className: "text-red-500",
+  //   link: "https://www.instagram.com/fer_ziad/",
+  // },
+  // {
+  //   name: "WhatsApp",
+  //   icon: "FaWhatsapp",
+  //   className: "text-green-500",
+  //   link: "https://wa.me/213792926151",
+  // },
+  // {
+  //   name: "Telegram",
+  //   icon: "FaTelegram",
+  //   className: "text-blue-500",
+  //   link: "https://t.me/ferZiad8",
+  // },
 ];
 
 export const images = [
   { name: imageTwo },
   { name: imageThree },
-  { name: imageFive },
   { name: imageFour },
   { name: imageOne },
+  { name: imageFive },
 ];
 
 export const workspaces = [
@@ -123,12 +153,13 @@ export const projects = [
   },
 
   {
-    name: "Rkeen",
-    desc: "An informational website for a real estate company.",
-    img: rakeen,
-    demoLink: "https://rkeen-eight.vercel.app/",
-    gitHubLink: "https://github.com/Ziad1258/rakeen",
+    name: "Salatify",
+    desc: "An informational Islamic application that provides prayer times and a variety of Sunnah books, among other features.",
+    img: Salatify,
+    demoLink: "https://salatify.netlify.app/",
+    gitHubLink: "https://github.com/Ziad1258/salatify",
   },
+
   {
     name: "Souf Academy",
     desc: "An informational website for private educational academy",
@@ -136,20 +167,21 @@ export const projects = [
     demoLink: "https://souf-academy.vercel.app/",
     gitHubLink: "https://github.com/Ziad1258/soufAcademy",
   },
+
+  {
+    name: "Rkeen",
+    desc: "An informational website for a real estate company.",
+    img: rakeen,
+    demoLink: "https://rkeen-eight.vercel.app/",
+    gitHubLink: "https://github.com/Ziad1258/rakeen",
+  },
+
   {
     name: "Suuny",
     desc: "A simple weather application I have created , enable user to discover the temperature based on the city or country which he choosed",
     img: Sunny,
     demoLink: "https://sunny-swart.vercel.app/",
     gitHubLink: "https://github.com/Ziad1258/suuny",
-  },
-
-  {
-    name: "Salatify",
-    desc: "An informational Islamic application that provides prayer times and a variety of Sunnah books, among other features.",
-    img: Salatify,
-    demoLink: "https://salatify.netlify.app/",
-    gitHubLink: "https://github.com/Ziad1258/salatify",
   },
 ];
 
@@ -195,8 +227,8 @@ export const devTools = [
       desc: "Tailwind CSS is a utility-first CSS framework that allows you to rapidly build custom designs without ever leaving your HTML. It provides a comprehensive set of pre-built components and utility classes, enabling efficient styling and responsive design.",
     },
     {
-      name: "Flutter",
-      desc: "Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. It offers fast development cycles, expressive and flexible UI components, and native performance on multiple platforms.",
+      name: "React Native",
+      desc: "React Native is Facebook's UI framework for building natively compiled applications for mobile platforms using JavaScript and React. It allows developers to create apps for both iOS and Android from a single codebase. React Native offers fast development cycles, reusable components, and native performance while maintaining flexibility across multiple platforms.",
     },
     {
       name: "React",
