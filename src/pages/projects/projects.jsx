@@ -50,7 +50,7 @@ export default function Projects() {
                     <img
                       src={project.img}
                       alt={project.name}
-                      className="w-full h-full object-fit  "
+                      className="w-full h-full object-contain  "
                     />
                   )}
                 </div>

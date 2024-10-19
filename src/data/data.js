@@ -16,7 +16,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 import hasib from "../assets/Hasib.png";
 import Salatify from "../assets/Saltify.png";
-import rakeen from "../assets/ركين للتنمية العقارية.png";
+// import rakeen from "../assets/ركين للتنمية العقارية.png";
+import najeeb from "../assets/najeeb.png";
 import Sunny from "../assets/Sunny.png";
 import zedExpress from "../assets/ZedExpress.png";
 import soufacademy from "../assets/soufacademy.png";
@@ -169,11 +170,11 @@ export const projects = [
   },
 
   {
-    name: "Rkeen",
-    desc: "An informational website for a real estate company.",
-    img: rakeen,
-    demoLink: "https://rkeen-eight.vercel.app/",
-    gitHubLink: "https://github.com/Ziad1258/rakeen",
+    name: "Najeeb",
+    desc: "An Educational web application for all students",
+    img: najeeb,
+    demoLink: "https://najeeb-zeta.vercel.app/",
+    gitHubLink: "https://github.com/Ziad1258/najeeb",
   },
 
   {
