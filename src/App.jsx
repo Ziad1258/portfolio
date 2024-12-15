@@ -209,20 +209,12 @@ function App() {
               );
             })}
 
-            {/* <Link
-              className="p-2 w-full flex justify-center items-center bg-gray-50 mt-6 rounded-md border hover:bg-gray-100 transition-all duration-300
-              dark:bg-zinc-800 dark:hover:bg-dark dark:border-gray-500 dark:text-gray-100  "
-              download={true}
-              href="/cv.pdf"
-            >
-              {" "}
-              Download CV{" "}
-            </Link> */}
             <a
               className="p-2 w-full flex justify-center items-center bg-gray-50 mt-6 rounded-md border hover:bg-gray-100 transition-all duration-300
-              dark:bg-zinc-800 dark:hover:bg-dark dark:border-gray-500 dark:text-gray-100  "
-              download={true}
-              href="/cv.pdf"
+  dark:bg-zinc-800 dark:hover:bg-dark dark:border-gray-500 dark:text-gray-100"
+              download="ziad-frontend-dev.pdf"
+              href="/ziad-frontend-dev.pdf"
+              type="application/pdf"
             >
               Download Cv
             </a>
